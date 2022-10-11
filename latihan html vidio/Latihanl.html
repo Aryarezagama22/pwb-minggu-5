@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>website video</title>
+    <link rel="stylesheet" type="text/css" href="arya.css">
+    </head>
+    <body>
+      <h1 align="center">Silahkan lihat Vidio  dibawah ini : </h1>
+        <br>
+        <br>
+        <br>
+        <div style="text-align:center"> 
+            <button onclick="playPause()">Play/Pause</button> 
+            <button onclick="makeBig()">Big</button>
+            <button onclick="makeSmall()">Small</button>
+            <button onclick="makeNormal()">Normal</button>
+            <br><br>
+            <video id="video1" width="50%">
+              <source src="video.mp4" type="video/mp4">
+              <source src="video.mp4" type="video/ogg">
+              <track kind="subtitles" srclang="eng" src="video.mp4" label="English" default>
+              Your browser does not support HTML video.
+            </video>
+          </div> 
+          
+          <script> 
+          var myVideo = document.getElementById("video1"); 
+          
+          function playPause() { 
+            if (myVideo.paused) 
+              myVideo.play(); 
+            else 
+              myVideo.pause(); 
+          } 
+          
+          function makeBig() { 
+              myVideo.width = 900; 
+          } 
+          
+          function makeSmall() { 
+              myVideo.width = 320; 
+          } 
+          
+          function makeNormal() { 
+              myVideo.width = 420; 
+          } 
+          </script> 
+
+    </body>
+</html>
